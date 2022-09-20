@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<!--Made by AnonyTimes.com-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Hacked by Anonymous</title>
+<meta name="description" content="Made by AnonyTimes.com"/>
+<meta name="keywords" content="made by anonytimes,">
+<meta name="author" content="AnonyTimes"/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:site_name" content="Krishnendu Chatterjee"/>
+<meta property="og:image" content="icon.png"/>
+<meta property="og:image:width" content="250"/>
+<meta property="og:image:height" content="150"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Hacked by Anonymous" />
+<meta property="og:description" content="Made By AnonyTimes." />
+<meta property="og:url" content="#"/>
+<link rel="shortcut icon" type="image/png" href="icon.png"/>
+<style>
+body{
+background-image: url('background.gif');
+background-size: cover;
+background-color: black;
+height: 100vh;
+padding:0;
+margin:0;
+font-family: Courier New;
+text-align: center;
+}
+div{
+text-align: center;
+color: white;
+padding: 5px;
+font-family: Macloney;
+font-size: 25px;
+text-shadow: 0 0 20px red, 0 0 20px red;
+}
+.error{
+animation:errorText 1.2s infinite;
+}
+@keyframes errorText{
+    0%{     color: #FF0000;    }
+    49%{    color: #FF0000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #FF0000;    }
+}
+@font-face {
+  font-family: Macloney;
+  src: url(Macloney.woff);
+}
+</style>
+</head>
+<body>
+<!--Made by AnonyTimes.com-->
+<div class="error">Critical Error notice!!</div>
+<center><img src="error.gif" border="0" width="200px" height="100px"></center>
+<div><marquee scrollamount="10" direction="left" width="50%">We are Anonymous!</marquee></div>
+<center><div><img src="hacked.gif" border="0" width="350px" height="60px"></div></center>
+<!--Made by AnonyTimes.com-->
+<script type="text/javascript">
+    msg = "..:: Hacked By Anonymous ::.. ";
+    msg = "" + msg;pos = 0;
+    function scrollMSG() {
+    document.title = msg.substring(pos, msg.length) + msg.substring(0, pos); pos++;
+    if (pos > msg.length) pos = 0
+    window.setTimeout("scrollMSG()",10);
+    }
+    scrollMSG();
+</script>
+<script type="text/javascript">
+
+    TypingText = function(element, interval, cursor, finishedCallback) {
+
+    if((typeof document.getElementById ==
+
+    "undefined") || (typeof element.innerHTML == "undefined")) {
+
+    this.running = true;
+
+    return;
+
+    }
+
+    this.element = element;
+
+    this.finishedCallback = (finishedCallback
+
+    ? finishedCallback : function() { return; });
+
+    this.interval = (typeof interval == "undefined" ? 100 : interval);
+
+    this.origText = this.element.innerHTML;
+
+    this.unparsedOrigText = this.origText;
+
+    this.cursor = (cursor ? cursor : "");
+
+    this.currentText = "";
+
+    this.currentChar = 0;
+
+    this.element.typingText = this;
+
+    if(this.element.id == "") this.element.id = "typingtext" + TypingText.currentIndex++;
+
+    TypingText.all.push(this);
+
+    this.running = false;
+
+    this.inTag = false;
+
+    this.tagBuffer = "";
+
+    this.inHTMLEntity = false;
+
+    this.HTMLEntityBuffer = "";
+
+    }
+
+    TypingText.all = new Array();
+
+    TypingText.currentIndex = 0;
+
+    TypingText.runAll
+
+    = function() {
+
+    for(var i = 0; i < TypingText.all.length; i++) TypingText.all[i].run();
+
+    }
+
+    TypingText.prototype.run = function() {
+
+    if(this.running) return;
+
+    if(typeof this.origText == "undefined") {
+
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()", this.interval);
+
+    return;
+
+    }
+
+    if(this.currentText == "") this.element.innerHTML = "";
+
+    if(this.currentChar < this.origText.length) {
+
+    if(this.origText.charAt(this.currentChar) == "<" &&
+
+    !this.inTag) {
+
+    this.tagBuffer = "<";
+
+    this.inTag = true;
+
+    this.currentChar++;
+
+    this.run();
+
+    return;
+
+    } else if(this.origText.charAt(this.currentChar) == ">" &&
+
+    this.inTag) {
+
+    this.tagBuffer += ">";
+
+    this.inTag = false;
+
+    this.currentText += this.tagBuffer;
+
+    this.currentChar++;
+
+    this.run();
+
+    return;
+
+    } else
+
+    if(this.inTag) {
+
+    this.tagBuffer += this.origText.charAt(this.currentChar);
+
+    this.currentChar++;
+
+    this.run();
+
+    return;
+
+    } else
+
+    if(this.origText.charAt(this.currentChar) == "&" && !this.inHTMLEntity) {
+
+    this.HTMLEntityBuffer = "&";
+
+    this.inHTMLEntity = true;
+
+    this.currentChar++;
+
+    this.run();
+
+    return;
+
+    } else if(this.origText.charAt(this.currentChar) == ";" && this.inHTMLEntity) {
+
+    this.HTMLEntityBuffer += ";";
+
+    this.inHTMLEntity =
+
+    false;
+
+    this.currentText += this.HTMLEntityBuffer;
+
+    this.currentChar++;
+
+    this.run();
+
+    return;
+
+    } else if(this.inHTMLEntity) {
+
+    this.HTMLEntityBuffer +=
+
+    this.origText.charAt(this.currentChar);
+
+    this.currentChar++;
+
+    this.run();
+
+    return;
+
+    } else {
+
+    this.currentText += this.origText.charAt(this.currentChar);
+
+    }
+
+    this.element.innerHTML = this.currentText;
+
+    this.element.innerHTML += (this.currentChar < this.origText.length - 1 ? (typeof this.cursor == "function" ?
+
+    this.cursor(this.currentText) : this.cursor) : "");
+
+    this.currentChar++;
+
+    setTimeout("document.getElementById('" + this.element.id + "').typingText.run()",
+
+    this.interval);
+
+    } else {
+
+    this.currentText = "";
+
+    this.currentChar = 0;
+
+    this.running = false;
+
+    this.finishedCallback();
+
+    }
+
+    }
+	
+</script>
+<!--Made by AnonyTimes.com-->
+<div id="message">
+<br>This Website Has Been Hacked By Anonymous</br>
+<br>---------------------------------------------</br>
+<br>Hello Mr....</br>
+<br>No System Is Safe!!!!</br>
+<br>We are Anonymous!!!!</br>
+<br>We are legion!!!!</br>
+<br>We do not forgive!!!!</br>
+<br>We do not forget!!!!</br>
+<br>Expect us!!!!</br>
+</div>
+<!--Made by AnonyTimes.com-->
+<div><marquee scrollamount="10" direction="right" width="50%">We are Anonymous!</marquee></div>
+<script type="text/javascript">
+    new TypingText(document.getElementById("message"), 100, function(i){ var ar = new Array("|", " ", "|", " ", "|"); return " " +
+    ar[i.length % ar.length]; });
+    TypingText.runAll();
+</script>
+</body>
+</html>
+<!--Made by AnonyTimes.com-->
